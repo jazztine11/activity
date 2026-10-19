@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="practice.css">
+
+    <title>Pure Silver Jewelry</title>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="nav">
+
+        <!-- LOGO -->
+        <div class="branding">
+
+            <img src="Gold Black and White Elegant Jewelry Logo.png"
+                 alt="Pure Silver Jewelry Logo">
+                  <h1 class="branding-title">
+        Pure Silver Jewelry
+    </h1>
+
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <div class="shop-link">
+
+            <a href="#" class="link">Home</a>
+            <a href="#" class="link">shop</a>
+            <a href="collection.html" class="link">Collection</a>
+            <a href="#" class="link">contacts</a>
+            <a href="aboutus.html" class="link">about us</a>
+
+           
+
+            <!-- CART -->
+            <div class="cart-container">
+
+                <button id="cart-button">
+                    🛒 Cart (<span id="cart-count">0</span>)
+                </button>
+
+
+                <!-- CART DROPDOWN -->
+                <div id="cart-dropdown" class="cart-dropdown">
+
+                    <h3>Your Cart</h3>
+
+                    <div id="cart-items"></div>
+
+                    <p class="cart-total">
+                        Total: ₱<span id="cart-total">0</span>
+                    </p>
+
+                    <button id="checkout-btn">
+                        Checkout
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- LOGIN -->
+            <a href="login.html" class="link login-link">
+                Log In
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <section class="products">
+
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqCwZaRIre6oBdc7pYaQPorqcfXWJOf2T52_4II_BvdUrcl5TNVGlQv-86&s=10"
+                alt="Silver Heart Necklace"
+            >
+
+            <h3>Silver Heart Necklace</h3>
+
+            <p>₱1,299</p>
+
+            <button class="view-btn">
+                View Product
+            </button>
+
+            <button
+                class="cart-btn"
+                data-name="Silver Heart Necklace"
+                data-price="1299"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbELdwzz8Zxa2j2NOQXWEx_D4CfkrFIqsyWfmm_MqVavykvzDJ6mIGIH0&s=10"
+                alt="Luxury Silver Watch"
+            >
+
+            <h3>Luxury Silver Watch</h3>
+
+            <p>₱2,499</p>
+
+            <button class="view-btn">
+                View Product
+            </button>
+
+            <button
+                class="cart-btn"
+                data-name="Luxury Silver Watch"
+                data-price="2499"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+
+            <img
+                src="https://cdn.eternz.com/thumbnails/products/16c_078468d1_thumbnail_1024.jpg"
+            >
+
+            <h3>Diamon luxurius earings
+            </h3>
+
+            <p>₱2,499</p>
+
+            <button class="view-btn">
+                View Product
+            </button>
+
+            <button
+                class="cart-btn"
+                data-name="Luxury Silver Watch"
+                data-price="2499"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5u5_hlpgltsfctMLBNDYduAFwSSiInEPelg8JS_h8KjdKAKm4y4DottY&s=10"
+            >
+
+            <h3>diamon and gold bracelet</h3>
+
+            <p>₱8,499</p>
+
+            <button class="view-btn">
+                View Product
+            </button>
+
+            <button
+                class="cart-btn"
+                data-name="Luxury Silver Watch"
+                data-price="2499"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+<!---item5-->
+                <div class="product-card">
+
+            <img
+                src="https://www.thejewelleryeditor.com/media/images_thumbnails/filer_public_thumbnails/filer_public/a7/88/a7885f5f-cb1c-45f8-af6a-7ffeffac2297/0323ch72937_change.jpg__760x0_q75_crop-scale_subsampling-2_upscale-false.jpg"
+            >
+
+            <h3>Blue diamond ring</h3>
+
+            <p>₱90,499</p>
+
+            <button class="view-btn">
+                View Product
+            </button>
+
+            <button
+                class="cart-btn"
+                data-name="Luxury Silver Watch"
+                data-price="2499"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+
+                <div class="product-card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCCsFpRHEfn4dK4bPyXKMVyiEdVlgdFnTmN7DisrmwDw&s=10"
+            >
+
+            <h3>gold ring</h3>
+
+            <p>₱4,499</p>
+
+            <button class="view-btn">
+                View Product
+            </button>
+
+            <button
+                class="cart-btn"
+                data-name="Luxury Silver Watch"
+                data-price="2499"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+
+                <div class="product-card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTxpSQ-gyQP-FEU_gmYpAuL7WR6wTgC0CTUoHoV7-md-C2mau9rTfDvRD2&s=10"
+            >
+
+            <h3>diamond ring</h3>
+
+            <p>₱50,499</p>
+
+            <button class="view-btn">
+                View Product
+            </button>
+
+            <button
+                class="cart-btn"
+                data-name="Luxury Silver Watch"
+                data-price="2499"
+            >
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- ADD MORE PRODUCTS HERE -->
+
+
+        
+
+
+    </section>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        // =========================
+        // CART
+        // =========================
+
+        let cart = [];
+
+
+        // =========================
+        // GET ELEMENTS
+        // =========================
+
+        const cartButtons =
+            document.querySelectorAll(".cart-btn");
+
+        const cartCount =
+            document.getElementById("cart-count");
+
+        const cartButton =
+            document.getElementById("cart-button");
+
+        const cartDropdown =
+            document.getElementById("cart-dropdown");
+
+        const cartItems =
+            document.getElementById("cart-items");
+
+        const cartTotal =
+            document.getElementById("cart-total");
+
+        const checkoutButton =
+            document.getElementById("checkout-btn");
+
+
+        // =========================
+        // ADD TO CART
+        // =========================
+
+        cartButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                const name =
+                    button.getAttribute("data-name");
+
+                const price =
+                    button.getAttribute("data-price");
+
+
+                cart.push({
+                    name: name,
+                    price: price
+                });
+
+
+                cartCount.textContent =
+                    cart.length;
+
+
+                displayCart();
+
+            });
+
+        });
+
+
+        // =========================
+        // DISPLAY CART
+        // =========================
+
+        function displayCart() {
+
+            cartItems.innerHTML = "";
+
+            let total = 0;
+
+
+            cart.forEach(function(item) {
+
+                const product =
+                    document.createElement("p");
+
+
+                product.textContent =
+                    item.name +
+                    " - ₱" +
+                    Number(item.price).toLocaleString();
+
+
+                cartItems.appendChild(product);
+
+
+                total += Number(item.price);
+
+            });
+
+
+            cartTotal.textContent =
+                total.toLocaleString();
+
+        }
+
+
+        // =========================
+        // OPEN / CLOSE CART
+        // =========================
+
+        cartButton.addEventListener("click", function() {
+
+            cartDropdown.classList.toggle("show");
+
+        });
+
+
+        // =========================
+        // CHECKOUT
+        // =========================
+
+        checkoutButton.addEventListener("click", function() {
+
+            if (cart.length === 0) {
+
+                alert("Your cart is empty.");
+
+            } else {
+
+                window.location.href =
+                    "checkout.html";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
