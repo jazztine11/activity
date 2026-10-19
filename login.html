@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Pure Silver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+
+      <div class="hero">
+        <h1>PURE SILVER</h1>
+        <h2>JEWELRY</h2>
+        <p>Elegance that lasts.</p>
+        <p>Crafted for every moment.</p>
+
+        <a href="#" class="collection">Discover Collection</a>
+    </div>
+
+<div class="log-in">
+
+        <h2>Welcome Back</h2>
+        <p>Sign in to your account</p>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button class="btn" onclick="login()">Log-in</button>
+
+<a href="#" class="forgot">Forgot password?</a>
+
+<p id="error"></p>
+
+
+
+</div>
+<script>
+function login() {
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email === "admin@gmail.com" && password === "12345") {
+
+        window.location.href = "practice.html";
+
+    } else {
+
+        document.getElementById("error").textContent =
+            "Incorrect email or password.";
+
+    }
+}
+</script>
+</body>
+</html>
+
+

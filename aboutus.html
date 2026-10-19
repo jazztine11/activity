@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Pure Silver Jewelry</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #0b0a08;
+      --card: #14120e;
+      --gold: #e0b51e;
+      --light-gold: #ffdf58;
+      --cream: #fffbe4;
+      --muted: #b9b09c;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+    }
+
+    /* Navigation */
+    header {
+      background: #12110d;
+      border-bottom: 1px solid var(--gold);
+      padding: 14px 3%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      color: #ffd400;
+      font-size: clamp(21px, 3vw, 40px);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 6px 12px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 450px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      padding: 70px 7%;
+      background:
+        radial-gradient(ellipse at 85% 40%,
+        #352a0d 0%, transparent 45%);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.15;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 480px;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .gold-button {
+      display: inline-block;
+      background: linear-gradient(120deg, #f5d34b, #c99b09);
+      color: #151108;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      padding: 12px 27px;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .gold-button:hover {
+      background: transparent;
+      color: var(--light-gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      height: 340px;
+      border: 1px solid #927315;
+      padding: 10px;
+      box-shadow: 0 0 30px #d6a91b15;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Shared sections */
+    section.content-section {
+      padding: 75px 7%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px, 4vw, 49px);
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 span {
+      color: var(--gold);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .story-image {
+      height: 380px;
+      overflow: hidden;
+      border: 1px solid #8c6d11;
+      padding: 8px;
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .story-image:hover img {
+      transform: scale(1.04);
+    }
+
+    .story-text h2 {
+      font-size: 43px;
+      margin-bottom: 20px;
+    }
+
+    .story-text h2 span {
+      color: var(--gold);
+    }
+
+    .story-text p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .story-text .signature {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 23px;
+      margin-top: 20px;
+    }
+
+    /* Values */
+    .values-section {
+      background: #100f0b;
+      border-top: 1px solid #302710;
+      border-bottom: 1px solid #302710;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .value-card {
+      text-align: center;
+      background: var(--card);
+      border: 1px solid #51400e;
+      padding: 32px 22px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+    }
+
+    .value-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .value-card h3 {
+      font-size: 25px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .value-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Call to action */
+    .cta {
+      text-align: center;
+      padding: 80px 7%;
+      background:
+        radial-gradient(ellipse at center, #30250d, var(--black) 72%);
+    }
+
+    .cta h2 {
+      font-size: clamp(35px, 5vw, 52px);
+      margin-bottom: 15px;
+    }
+
+    .cta h2 span {
+      color: var(--gold);
+    }
+
+    .cta p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--gold);
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    footer strong {
+      color: var(--gold);
+      font-size: 17px;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    /* Responsive layout */
+    @media (max-width: 900px) {
+      header {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+        gap: 15px;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 7%;
+        gap: 30px;
+      }
+
+      .hero-image {
+        height: 300px;
+      }
+
+      .story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .story-image {
+        height: 330px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section.content-section {
+        padding: 55px 6%;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .story-text h2 {
+        font-size: 36px;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="brand">Pure Silver Jewelry</a>
+
+    <button class="menu-toggle"
+      id="menuToggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false">☰</button>
+
+    <nav id="navigation">
+      <a href="practice.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="collection.html">Collection</a>
+      <a href="contacts.html">Contacts</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="cart.html">Cart (0)</a>
+      <a href="login.html">Log In</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">The Art of Elegance</div>
+        <h1>Our Story,<br><span>Your Elegance.</span></h1>
+        <p>
+          At Pure Silver Jewelry, we believe that every piece tells a story.
+          Discover timeless designs created to celebrate your individuality,
+          treasured memories, and life's most beautiful moments.
+        </p>
+        <a href="shop.html" class="gold-button">Discover Our Collection</a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1000&q=85"
+          alt="Elegant silver jewelry collection">
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="story">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=85"
+            alt="Fine jewelry crafted with attention to detail"
+            loading="lazy">
+        </div>
+
+        <div class="story-text">
+          <div class="eyebrow">Who We Are</div>
+          <h2>Beauty in Every <span>Detail</span></h2>
+
+          <p>
+            Pure Silver Jewelry was created from a love of timeless beauty,
+            meaningful accessories, and the little details that make every
+            person unique.
+          </p>
+
+          <p>
+            Our collection brings together elegance and everyday style,
+            offering jewelry for celebrations, thoughtful gifts, and
+            moments worth remembering.
+          </p>
+
+          <p>
+            We believe jewelry is more than an accessory. It is a reflection
+            of personality, a symbol of affection, and a keepsake that can
+            be cherished for years to come.
+          </p>
+
+          <div class="signature">Pure Silver Jewelry</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section values-section">
+      <div class="section-heading">
+        <div class="eyebrow">What Makes Us Special</div>
+        <h2>Our <span>Values</span></h2>
+        <p>The principles behind every piece and every experience.</p>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <div class="value-icon" aria-hidden="true">✧</div>
+          <h3>Timeless Elegance</h3>
+          <p>
+            We celebrate graceful designs that complement your style
+            and remain beautiful beyond passing trends.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon" aria-hidden="true">◇</div>
+          <h3>Attention to Detail</h3>
+          <p>
+            Every design is chosen with care, with an appreciation for
+            the fine details that make jewelry feel special.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <div class="value-icon" aria-hidden="true">♡</div>
+          <h3>Made for Memories</h3>
+          <p>
+            From meaningful gifts to personal milestones, we want our
+            jewelry to be part of the moments you treasure.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="eyebrow">Find Your Signature Style</div>
+      <h2>A Little Luxury, <span>Every Day.</span></h2>
+      <p>
+        Explore pieces that express who you are and make every moment shine.
+      </p>
+      <a href="practice.html" class="gold-button">Explore Our Jewelry</a>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Pure Silver Jewelry</strong>
+      <p>Elegance that lasts. Crafted for every moment.</p>
+    </div>
+
+    <div>
+      <a href="practice.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contacts.html">Contact</a>
+    </div>
+
+    <p>© <span id="year"></span> Pure Silver Jewelry.</p>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navigation = document.getElementById("navigation");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Automatically update copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>

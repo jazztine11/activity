@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections | Pure Silver Jewelry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Pure Silver Jewelry home">
+      <span class="brand-mark" aria-hidden="true">PSJ</span>
+      <span>Pure Silver Jewelry</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#">Home</a><a href="#shop">Shop</a><a class="active" href="#collections">Collection</a>
+      <a href="#contact">Contacts</a><a href="#about">About us</a>
+      <a class="cart-link" href="#cart" id="cartLink">🛒 Cart (<span id="cartCount">0</span>)</a>
+      <a href="#login">Log In</a>
+    </nav>
+  </header>
+
+  <main id="collections">
+    <section class="collection-intro">
+      <p class="eyebrow">CURATED FOR YOU</p>
+      <h1>Our <span>Collections</span></h1>
+      <p>Timeless pieces. Everyday elegance. A little sparkle for every moment.</p>
+    </section>
+
+    <section class="collection-tools" id="shop" aria-label="Collection filters">
+      <div class="category-tabs" role="group" aria-label="Filter by category">
+        <button class="tab active" data-category="all">All Jewelry</button>
+        <button class="tab" data-category="necklaces">Necklaces</button>
+        <button class="tab" data-category="rings">Rings</button>
+        <button class="tab" data-category="earrings">Earrings</button>
+        <button class="tab" data-category="watches">Watches</button>
+        <button class="tab" data-category="bracelets">Bracelets</button>
+      </div>
+      <div class="tool-right">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search jewelry..." aria-label="Search jewelry"></label>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="results-line"><span id="resultCount">6 pieces</span><span>Made to make every moment shine ✦</span></div>
+    <section class="product-grid" id="productGrid" aria-live="polite"></section>
+    <p class="empty-state" id="emptyState" hidden>No jewelry found. Try another search or category.</p>
+
+    <section class="collection-banner" id="about">
+      <div>
+        <p class="eyebrow">THE PURE SILVER PROMISE</p>
+        <h2>Little details.<br><span>Lasting memories.</span></h2>
+        <p>Discover thoughtful designs made to be treasured, gifted, and worn your way.</p>
+      </div>
+      <a class="button button-gold" href="#shop">Explore the collection <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a class="footer-brand" href="#">Pure Silver Jewelry</a>
+    <span>Everyday luxury, made personal.</span>
+    <span>© <span id="year"></span> Pure Silver Jewelry</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
